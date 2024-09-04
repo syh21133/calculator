@@ -93,12 +93,12 @@ public class Main {
                 if (answer.equals("exit")) {
                     System.out.println("계산기를 종료합니다.");
                     exit = false;
-                } else {
-                    continue;
                 }
+
+
             } else {
                 System.out.println("잘못 입력 하셨습니다.");
-                continue;
+
 
             }
 
