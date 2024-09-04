@@ -70,23 +70,29 @@ public class Main {
 
 
         Calculator calc = new Calculator();
+        ArithmeticCalculator aCalc = new ArithmeticCalculator();
         Scanner scanner = new Scanner(System.in);
         boolean exit = true;
 
 
         while (exit) {
             System.out.print("첫 번째 숫자 입력 : ");
-            int first = scanner.nextInt();
+//           int first = scanner.nextInt();
+            double first = scanner.nextDouble();
             System.out.print("사칙연산 기호 입력 : ");
             String operator = scanner.next();
             System.out.print("두 번째 숫자 입력 : ");
-            int second = scanner.nextInt();
+//          int second = scanner.nextInt();
+            double second = scanner.nextDouble();
 
             if (first >= 0 && second >= 0) {
 
-                System.out.println(calc.Cal(first, second, operator));
+//                System.out.println(calc.Cal(first, second, operator));
+//
+//                System.out.println("저장된 계산값 : "+Calculator.calResult());
 
-                System.out.println("저장된 계산값 : "+Calculator.calResult());
+                System.out.println(aCalc.calculate(first,second,operator));
+
                 System.out.println("계산기를 종료하시겠습니까?(exit입력 시 종료)");
                 String answer = scanner.next();
 
@@ -105,6 +111,9 @@ public class Main {
 
 
         }
+
+
+
 
 
     }
