@@ -8,8 +8,8 @@ import java.util.function.BinaryOperator;
 
 public enum OperatorType {
 
-    PLUS("+", Double::sum),
-    MINUS("-", (firstNumber, secondNumber) -> firstNumber - secondNumber),
+    ADD("+", Double::sum),
+    SUBTRACT("-", (firstNumber, secondNumber) -> firstNumber - secondNumber),
     MULTIPLY("*", (firstNumber, secondNumber) -> firstNumber * secondNumber),
     DIVIDE("/", (firstNumber, secondNumber) -> {
 
