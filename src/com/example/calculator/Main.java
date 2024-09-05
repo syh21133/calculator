@@ -69,7 +69,7 @@ public class Main {
 //        }
 
 
-        Calculator calc = new Calculator();
+//        Calculator calc = new Calculator();
         ArithmeticCalculator aCalc = new ArithmeticCalculator();
         Scanner scanner = new Scanner(System.in);
         boolean exit = true;
@@ -91,7 +91,9 @@ public class Main {
 //
 //                System.out.println("저장된 계산값 : "+Calculator.calResult());
 
-                System.out.println(aCalc.calculate(first,second,operator));
+                if(!Double.isInfinite(aCalc.calculate(first,second,operator))) {
+                    System.out.println(first + " " + operator + " " + second + " = " + aCalc.calculate(first, second, operator));
+                }
 
                 System.out.println("계산기를 종료하시겠습니까?(exit입력 시 종료)");
                 String answer = scanner.next();

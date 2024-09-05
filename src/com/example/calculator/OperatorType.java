@@ -14,7 +14,8 @@ public enum OperatorType {
     DIVIDE("/", (firstNumber, secondNumber) -> {
 
         if (secondNumber == 0) {
-            throw new IllegalArgumentException("0으로 나눌수 없습니다.");
+            System.out.println("0으로 나눌수 없습니다.");
+
 
         }
         return firstNumber / secondNumber;
