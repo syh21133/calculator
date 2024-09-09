@@ -38,19 +38,19 @@ public class Calculator {
         String answer = "";
 
         switch (c) {
-            case "+" -> {
+            case "+":
                 answer = a + " " + c + " " + b + " = " + (a + b);
                 Calculator.addResult(a+b);
-            }
-            case "-" -> {
+
+            case "-":
                 answer = a + " " + c + " " + b + " = " + (a - b);
                 Calculator.addResult(a-b);
-            }
-            case "*" -> {
+
+            case "*":
                 answer = a + " " + c + " " + b + " = " + (a * b);
                 Calculator.addResult(a*b);
-            }
-            case "/" -> {
+
+            case "/" :
 
                 try {
 
@@ -61,11 +61,11 @@ public class Calculator {
                     System.out.println("0으로 나눌수 없습니다.");
 
                 }
-            }
 
-            default -> {
+
+            default:
                 System.out.println("잘못 입력 하셨습니다.");
-            }
+
         }
         return answer;
 

@@ -91,8 +91,12 @@ public class Main {
 //
 //                System.out.println("저장된 계산값 : "+Calculator.calResult());
 
-                if(!Double.isInfinite(aCalc.calculate(first,second,operator))) {
-                    System.out.println(first + " " + operator + " " + second + " = " + aCalc.calculate(first, second, operator));
+                double opResult = aCalc.calculate(first,second,operator);
+
+                if(!Double.isInfinite(opResult)) {
+                    System.out.println(first + " " + operator + " " + second + " = " + opResult);
+
+                    System.out.println("저장된 계산값 : "+ aCalc.calResult());
                 }
 
                 System.out.println("계산기를 종료하시겠습니까?(exit입력 시 종료)");
