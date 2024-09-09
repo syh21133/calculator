@@ -69,7 +69,7 @@ public class Main {
 //        }
 
 
-//        Calculator calc = new Calculator();
+        Calculator calc = new Calculator();
         ArithmeticCalculator aCalc = new ArithmeticCalculator();
         Scanner scanner = new Scanner(System.in);
         boolean exit = true;
@@ -77,7 +77,7 @@ public class Main {
 
         while (exit) {
             System.out.print("첫 번째 숫자 입력 : ");
-//           int first = scanner.nextInt();
+//          int first = scanner.nextInt();
             double first = scanner.nextDouble();
             System.out.print("사칙연산 기호 입력 : ");
             String operator = scanner.next();

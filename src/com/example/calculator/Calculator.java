@@ -62,6 +62,10 @@ public class Calculator {
 
                 }
             }
+
+            default -> {
+                System.out.println("잘못 입력 하셨습니다.");
+            }
         }
         return answer;
 
