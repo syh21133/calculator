@@ -37,6 +37,8 @@ public class Calculator {
     public String Cal(int a, int b, String c) {
         String answer = "";
 
+
+        // 계산하기
         switch (c) {
             case "+":
                 answer = a + " " + c + " " + b + " = " + (a + b);
@@ -73,6 +75,8 @@ public class Calculator {
 
     }
 
+
+    // 계산결과 저장
     public static void addResult(int cal) {
         if(count<3){
             calResult.add(cal);
@@ -84,6 +88,8 @@ public class Calculator {
 
 
     }
+
+    // 계산결과 조회
     public List<Integer> printResult(){
 
         return calResult;

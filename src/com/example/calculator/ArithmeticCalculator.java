@@ -12,6 +12,7 @@ public class ArithmeticCalculator {
 
     public double calculate(double firstNumber, double secondNumber,String operator) {
 
+        // 계산하기
         double opResult = OperatorType.from(operator)
                 .calculate(firstNumber, secondNumber);
 
@@ -33,7 +34,7 @@ public class ArithmeticCalculator {
     }
 
     // 입력값 받고 보다 큰 수 조회
-    public static String calResult(Double check) {
+    public static void calResult(Double check) {
 
         for(int i = 0;i<count;i++){
             if(check<=calResult.get(i)){
@@ -42,8 +43,6 @@ public class ArithmeticCalculator {
 
         }
 
-
-        return calResult.toString();
     }
 
 
