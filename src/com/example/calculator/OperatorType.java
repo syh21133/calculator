@@ -13,6 +13,7 @@ public enum OperatorType {
     MULTIPLY("*", (firstNumber, secondNumber) -> firstNumber * secondNumber),
     DIVIDE("/", (firstNumber, secondNumber) -> {
 
+        // 나누기 0 처리
         if (secondNumber == 0) {
             System.out.println("0으로 나눌수 없습니다.");
 
@@ -21,6 +22,7 @@ public enum OperatorType {
         return firstNumber / secondNumber;
 
 //        try {
+//            return firstNumber / secondNumber;
 //
 //            // 0으로 나눴을때 예외처리
 //        } catch (ArithmeticException e) {
@@ -40,11 +42,12 @@ public enum OperatorType {
         this.expression = expression;
     }
 
+    // 연산자 잘못 썼을때
     public static OperatorType from(String operator) {
         return Arrays.stream(OperatorType.values())
                 .filter(type -> type.operator.equals(operator))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("[ERROR] 연산자가 아닙니다. 다시 입력해주세요."));
+                .orElseThrow(() -> new IllegalArgumentException("[ERROR] 연산자가 아닙니다."));
     }
 
     public double calculate(double firstNumber, double secondNumber) {

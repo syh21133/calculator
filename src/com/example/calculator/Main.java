@@ -76,50 +76,54 @@ public class Main {
 
 
         while (exit) {
-            System.out.print("첫 번째 숫자 입력 : ");
-//          int first = scanner.nextInt();
-            double first = scanner.nextDouble();
-            System.out.print("사칙연산 기호 입력 : ");
-            String operator = scanner.next();
-            System.out.print("두 번째 숫자 입력 : ");
-//          int second = scanner.nextInt();
-            double second = scanner.nextDouble();
 
-            if (first >= 0 && second >= 0) {
+
+            System.out.println("1.계산 2.조회 3.종료 ");
+            int num = scanner.nextInt();
+
+            switch (num) {
+
+
+                case 1:
+                    System.out.print("첫 번째 숫자 입력 : ");
+//          int first = scanner.nextInt();
+                    double first = scanner.nextDouble();
+                    System.out.print("사칙연산 기호 입력 : ");
+                    String operator = scanner.next();
+                    System.out.print("두 번째 숫자 입력 : ");
+//          int second = scanner.nextInt();
+                    double second = scanner.nextDouble();
+
+                    if (first >= 0 && second >= 0) {
 
 //                System.out.println(calc.Cal(first, second, operator));
 //
 //                System.out.println("저장된 계산값 : "+Calculator.calResult());
 
-                double opResult = aCalc.calculate(first,second,operator);
+                        double opResult = aCalc.calculate(first, second, operator);
 
-                if(!Double.isInfinite(opResult)) {
-                    System.out.println(first + " " + operator + " " + second + " = " + opResult);
+                        if (!Double.isInfinite(opResult)) {
+                            System.out.println(first + " " + operator + " " + second + " = " + opResult);
 
-                    System.out.println("저장된 계산값 : "+ aCalc.calResult());
-                }
+                        }
+                    }
+                    break;
+                case 2:
 
-                System.out.println("계산기를 종료하시겠습니까?(exit입력 시 종료)");
-                String answer = scanner.next();
+                    System.out.println("저장된 계산값 중 입력 값보다 큰 수 조회 ");
+                    Double check = scanner.nextDouble();
+                    aCalc.calResult(check);
+                    break;
 
-                if (answer.equals("exit")) {
+                case 3:
                     System.out.println("계산기를 종료합니다.");
                     exit = false;
-                }
-
-
-            } else {
-                System.out.println("잘못 입력 하셨습니다.");
+                    break;
 
 
             }
 
-
-
         }
-
-
-
 
 
     }
