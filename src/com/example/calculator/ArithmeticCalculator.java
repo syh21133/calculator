@@ -35,9 +35,12 @@ public class ArithmeticCalculator {
 
     // 입력값 받고 보다 큰 수 조회
     public static void calResult(Double check) {
+
+        // 조회시 저장값 x
         if(calResult.isEmpty()){
             System.out.println("저장된 계산값이 없습니다.");
         }
+
 
         else {
             for (int i = 0; i < count; i++) {
