@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.function.BinaryOperator;
 
 
-
-
 public enum OperatorType {
 
     ADD("+", (firstNumber, secondNumber) -> firstNumber + secondNumber),

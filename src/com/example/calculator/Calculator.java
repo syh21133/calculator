@@ -42,22 +42,22 @@ public class Calculator {
         switch (c) {
             case "+":
                 answer = a + " " + c + " " + b + " = " + (a + b);
-                Calculator.addResult(a+b);
+                Calculator.addResult(a + b);
 
             case "-":
                 answer = a + " " + c + " " + b + " = " + (a - b);
-                Calculator.addResult(a-b);
+                Calculator.addResult(a - b);
 
             case "*":
                 answer = a + " " + c + " " + b + " = " + (a * b);
-                Calculator.addResult(a*b);
+                Calculator.addResult(a * b);
 
-            case "/" :
+            case "/":
 
                 try {
 
                     answer = a + " " + c + " " + b + " = " + (a / b);
-                    Calculator.addResult(a/b);
+                    Calculator.addResult(a / b);
                     // 0으로 나눴을때 예외처리
                 } catch (ArithmeticException e) {
                     System.out.println("0으로 나눌수 없습니다.");
@@ -72,16 +72,15 @@ public class Calculator {
         return answer;
 
 
-
     }
 
 
     // 계산결과 저장
     public static void addResult(int cal) {
-        if(count<3){
+        if (count < 3) {
             calResult.add(cal);
             count++;
-        }else{
+        } else {
             calResult.remove(0);
             calResult.add(cal);
         }
@@ -90,7 +89,7 @@ public class Calculator {
     }
 
     // 계산결과 조회
-    public List<Integer> printResult(){
+    public List<Integer> printResult() {
 
         return calResult;
     }

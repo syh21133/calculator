@@ -10,7 +10,7 @@ public class ArithmeticCalculator {
     private static final List<Double> calResult = new ArrayList<Double>();
     Stream<double[]> stream;
 
-    public double calculate(double firstNumber, double secondNumber,String operator) {
+    public double calculate(double firstNumber, double secondNumber, String operator) {
 
         // 계산하기
         double opResult = OperatorType.from(operator)
@@ -35,12 +35,17 @@ public class ArithmeticCalculator {
 
     // 입력값 받고 보다 큰 수 조회
     public static void calResult(Double check) {
+        if(calResult.isEmpty()){
+            System.out.println("저장된 계산값이 없습니다.");
+        }
 
-        for(int i = 0;i<count;i++){
-            if(check<=calResult.get(i)){
-                System.out.println(calResult.get(i));
+        else {
+            for (int i = 0; i < count; i++) {
+                if (check <= calResult.get(i)) {
+                    System.out.println(calResult.get(i));
+                }
+
             }
-
         }
 
     }

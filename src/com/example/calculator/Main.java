@@ -108,8 +108,8 @@ public class Main {
                         }
                     }
                     break;
-                case 2:
 
+                case 2:
                     System.out.println("저장된 계산값 중 입력 값보다 큰 수 조회 ");
                     Double check = scanner.nextDouble();
                     aCalc.calResult(check);
